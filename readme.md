@@ -1,5 +1,7 @@
 # Firmware for IFKB WSofle Split Keyboard
 
+*** THIS IS ONLY FOR IFKB WSOFLE KEYBOARD, NOT THE OPEN SOURCE VERSION OF THE SOFLE ***
+
 This repository contains the customized firmware for the IFKB WSofle split keyboard. I modified the original firmware to disable the OLED display, as the right OLED on my board stopped working and was causing issues during operation.
 
 The original firmware (provided in a .rar file) was developed by IFKB (email: cengjianxin [at] ifkb.tech | https://home.ifkb.tech/) — all credit goes to them. My changes are minimal and mostly involve removing or disabling features (like OLED support) that were no longer functioning properly on my build.
