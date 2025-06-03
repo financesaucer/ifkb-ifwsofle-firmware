@@ -5,27 +5,34 @@ This repository contains the customized firmware for the IFKB WSofle split keybo
 The original firmware (provided in a .rar file) was developed by IFKB (email: cengjianxin [at] ifkb.tech | https://home.ifkb.tech/) — all credit goes to them. My changes are minimal and mostly involve removing or disabling features (like OLED support) that were no longer functioning properly on my build.
 
 # Why
+
 This was my first time working with keyboard firmware, and I ran into several issues while trying to compile it myself. To help future me (and maybe someone else), I decided to create this repository with a short guide on how I managed to get everything working.
 
 If you're already familiar with QMK, you might want to try updating the original firmware to be compatible with the latest qmk_firmware. I attempted that route, but ran into a large number of errors—likely due to significant breaking changes introduced since the original firmware was created. Instead, I reached out to the keyboard manufacturer and asked which vial-qmk commit they used to successfully compile the firmware.
 
 # Notes
 
-If you want to use the original_fw (which I recommend), start by extracting it to its own folder.
+- If you need to modify the firmware I strongly suggest to use the original IFKB firmware. You should download it from their user manual (link at the end of this readme), if you cannot download it for whatever reason, you could use the original_fw.rar provided in this repo.
 
-In the user manual, you’ll find two firmware versions depending on the type of encoder installed on your board. I use ECN02 encoders, and the compiled firmware works fine with them — so I assume this version is intended for ECN02.
+After download you should first extract the firmware it to its own folder.
+
+- Also, in the user manual, you’ll find two compiled uf2 firmware versions depending on the type of encoder installed on your board. I use ECN02 encoders, and the compiled firmware works fine with them — so I assume the firmware files version is intended for ECN02.
 
 If you have ECN01 encoders, you may need to modify the firmware to use the appropriate driver for ECN01. However, I haven’t tested this myself, so I can’t confirm it.
 
-Also I'm running debian linux but i think you could replicate this with macOS or windows too by following the steps in this guide.
+- Also I'm running debian linux but i think you could replicate this with macOS or windows too by following the steps in this guide.
 
-To be sure you have an IFKB keyboard, look at the user manual (link at the end) to see if its actually the same board. (The board should have the IFKB logo printed in silver)
+- To be sure you have an IFKB keyboard, look at the user manual (link at the end) to see if its actually the same board. (The board should have the IFKB logo printed in silver)
 
 *** I ALSO STRONGLY SUGGEST THAT YOU SAVE YOU VIAL LAYOUTS BEFORE PROCEDING! ***
 
 # ⚠️ Disclaimer
 
-This repository and guide are based on my personal experience compiling and modifying the IFKB WSofle firmware. I’m sharing this in the hope it helps others, but I take no responsibility if something goes wrong or if you brick your keyboard. Please proceed with caution and make sure you understand the steps before flashing any firmware to your device.
+This repository and guide are based on my personal experience compiling and modifying the IFKB WSofle firmware. I'm sharing it primarily for my own reference, but also in case it helps others.
+Use at your own risk — I take no responsibility for any damage, issues, or bricked keyboards that may result.
+Please proceed carefully, and make sure you fully understand each step before flashing firmware to your device. 
+
+If you're new to QMK or Vial, I strongly recommend reading their official documentation first (link at the end).
 
 # How to compile
 
@@ -110,6 +117,7 @@ Copying ifwsofle_vial.uf2 to qmk_firmware folder                                
 8. If you have saved your vial layout configuration, now its the time to load it back into the keyboard.
 
 # Final notes and useful links
+
 There is the original vendor firmware in the original_fw.rar, you can also download it from user manual url but i just wnated to be sure that I have a backup for it...
 
 - Vial guide: https://get.vial.today/docs/porting-to-vial.html
